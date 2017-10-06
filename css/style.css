@@ -12,25 +12,32 @@
 
   /* Then we define how is distributed the remaining space */
   justify-content: space-around;
+
+  width:100%;
 }
 
 .employee {
   background: #ffffff;
+  position: relative;
   padding: 5px;
   width: 300px;
   height: 150px;
   margin-top: 40px;
+  font-size: 11px;
+  color:black;
   line-height: 150px;
-  color: white;
   font-weight: bold;
-  font-size: 3em;
   text-align: center;
   border: 2px solid #D3D3D3;
   border-radius: 10px;
+  box-shadow: 0 1.5px 0 0 rgba(0, 0, 0, 0.1);
   }
 
 body {
-    background-color: cornsilk;
+    background-color: #fcfcfc;
+    font-size:12px;
+    font-family: 'Roboto'; font-size:12px;
+    color:gray;
 }
 
 
@@ -40,11 +47,29 @@ ul {
 
 .info {
     float:right;
-    font-size: 12px;
+    display: block;
+    font-size:12px;
     width:40%;
     height: 150px;
+    position:absolute;
+    top: -14%;
+    left: 54%;
     }
 
-.name{height:30px; color: black;}
-.email{height:30px; color: black;}
-.city{height:30px; color: black;}
+.employee-photo{
+  float: left;
+  border-radius: 50%;
+  position: absolute;
+  margin: 10px -130px;
+}
+
+.name{height:30px; font-size:15px;}
+
+.email{height:30px;}
+
+.city{height: 30px}
+
+.grey-font{
+  color: #888;
+  font-size: 12px;
+}
