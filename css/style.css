@@ -1,0 +1,50 @@
+.flex-container {
+  /* We first create a flex layout context */
+  display: flex;
+
+  /* Then we define the flow direction
+     and if we allow the items to wrap
+   * Remember this is the same as:
+   * flex-direction: row;
+   * flex-wrap: wrap;
+   */
+  flex-flow: row wrap;
+
+  /* Then we define how is distributed the remaining space */
+  justify-content: space-around;
+}
+
+.employee {
+  background: #ffffff;
+  padding: 5px;
+  width: 300px;
+  height: 150px;
+  margin-top: 40px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+  border: 2px solid #D3D3D3;
+  border-radius: 10px;
+  }
+
+body {
+    background-color: cornsilk;
+}
+
+
+ul {
+    list-style:none;
+}
+
+.info {
+    float:right;
+    font-size: 12px;
+    width:40%;
+    height: 150px;
+    }
+
+.name{height:30px; color: black;}
+.email{height:30px; color: black;}
+.city{height:30px; color: black;}
