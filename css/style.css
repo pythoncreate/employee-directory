@@ -105,11 +105,11 @@ ul {
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 25%;
-    height: 60%; 
+    width: 300px;
+    height: 375px;
     position:absolute;
-    top:-25%;
-    left:38%;
+    top:0;
+    left:40%;
     border-radius: 7px;
     /* Could be more or less, depending on screen size */
 }
@@ -130,8 +130,11 @@ ul {
 }
 
 .modal-text img {
-  position:absolute;
-  left: 180px;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   border-radius: 50%;
+   padding-bottom: 12px;
 
 }
 
@@ -142,14 +145,21 @@ ul {
     width:40%;
     height: 150px;
     position:absolute;
-    top: 15%;
-    left: 43%;
+    top: 46%;
+    left: 10%;
     text-align: left;
+    line-height: 20px;
+    }
+
+.modal-text .info .name{
+    font-size:16px;
+    font-weight: bold;
+    width:100%
     }
 
 .extra-info {
     position:absolute;
-    left: 43%;
-    top:36%;
-
-}
+    display:block;
+    left: 10%;
+    top:66%;
+    }
