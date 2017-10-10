@@ -1,4 +1,16 @@
-.flex-container {
+body {
+    background-color: #fcfcfc;
+    font-size:12px;
+    font-family: 'Roboto'; font-size:12px;
+    color:gray;
+}
+
+
+ul {
+    list-style:none;
+}
+
+.employees {
   /* We first create a flex layout context */
   display: flex;
 
@@ -14,36 +26,34 @@
   justify-content: space-around;
 
   width:100%;
+  margin-left: 30px;
 }
+
+.title {
+  width: 100%;
+  text-align: left;
+  margin-left: 82px;
+  margin-top:20px;
+  font-weight:bold;
+  font-size:14px;
+  }
 
 .employee {
   background: #ffffff;
   position: relative;
   padding: 5px;
-  width: 300px;
+  width: 350px;
   height: 150px;
-  margin-top: 40px;
+  margin-top: 20px;
   font-size: 11px;
   color:black;
   line-height: 150px;
   font-weight: bold;
   text-align: center;
-  border: 2px solid #D3D3D3;
-  border-radius: 10px;
-  box-shadow: 0 1.5px 0 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #D3D3D3;
+  border-radius: 7px;
   }
 
-body {
-    background-color: #fcfcfc;
-    font-size:12px;
-    font-family: 'Roboto'; font-size:12px;
-    color:gray;
-}
-
-
-ul {
-    list-style:none;
-}
 
 .info {
     float:right;
@@ -53,14 +63,15 @@ ul {
     height: 150px;
     position:absolute;
     top: -14%;
-    left: 54%;
+    left: 47%;
+    text-align: left;
     }
 
 .employee-photo{
   float: left;
   border-radius: 50%;
   position: absolute;
-  margin: 10px -130px;
+  margin: 10px -159px;
 }
 
 .name{height:30px; font-size:15px;}
@@ -72,4 +83,48 @@ ul {
 .grey-font{
   color: #888;
   font-size: 12px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%;
+    height: 60%; 
+    position:absolute;
+    top:-25%;
+    left:38%;
+    border-radius: 7px;
+    /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
