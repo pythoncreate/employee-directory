@@ -128,3 +128,28 @@ ul {
     text-decoration: none;
     cursor: pointer;
 }
+
+.modal-text img {
+  position:absolute;
+  left: 180px;
+
+}
+
+.modal-text .info {
+    float:right;
+    display: block;
+    font-size:12px;
+    width:40%;
+    height: 150px;
+    position:absolute;
+    top: 15%;
+    left: 43%;
+    text-align: left;
+    }
+
+.extra-info {
+    position:absolute;
+    left: 43%;
+    top:36%;
+
+}
