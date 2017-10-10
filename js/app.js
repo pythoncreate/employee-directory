@@ -8,6 +8,7 @@ $.ajax({
     	employees = data.results;
     	displayEmployees(employees);
     	$('.extra-info').hide();
+
 	}
 });
 //Create Function to Build Employee Car
@@ -23,9 +24,10 @@ function displayEmployees(employees){
 	    employeesHTML += '<div class="extra-info"><hr align="left" width="90%">';
 	    employeesHTML += '<div class="phone">' + employee.phone + '</div>';
 	    employeesHTML += '<div class="address">' + employee.location.street + ' ' + employee.location.city;
-	    employeesHTML += ',' + employee.location.state + ' ' + employee.location.zip + '</div>';
-	    employeesHTML += '<div class="birthday">Birthday: ' + employee.location.dob + '</div></div></div>';
- 
+	    employeesHTML += ',' + employee.location.state + ' ' + employee.location.postcode + '</div>';
+	    date = employee.dob.slice(0,10).split('-');
+	    employeesHTML += '<div class="birthday">Birthday: ' + date[1] +'/'+ date[2] + '/' + date[0] + '</div></div></div>';
+
 	       });
 
     $('.employees').html(employeesHTML);
@@ -34,8 +36,9 @@ function displayEmployees(employees){
 
 //Create Function to Build Modal
 function displayModal(employees){
-	var employeesModal="";
-	//create modal
+    var employeesModal="";
+    employees.find(".extra-info").css('display', 'block');
+    //create modal
     employeesModal += $(employees).html();
     $('.modal-text').html(employeesModal);
 }
@@ -43,11 +46,9 @@ function displayModal(employees){
 //Click Event To Display Modal
 var modal = document.getElementById('myModal');
 $('.employees').on("click", ".employee", function() {
-	  var current = $(this);
-	  var extra = current.parent().find(".extra-info");
-	  extra.css('display', 'block');
-	  modal.style.display = "block";
-	  displayModal(current);
+    var current = $(this).clone();
+    modal.style.display = "block";
+    displayModal(current);
 });
 
 // // When the user clicks on (x), close the modal
@@ -61,3 +62,4 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
