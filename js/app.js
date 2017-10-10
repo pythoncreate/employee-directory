@@ -1,16 +1,14 @@
 //Get JSON DATA and stored data in variable Employees.
 var employees;
+var phone;
 
 $.ajax({
     url: 'https://randomuser.me/api/?results=12&format=json',
-
     success: function(data){
     	employees = data.results;
     	displayEmployees(employees);
-    	console.log(employees);
 	}
 });
-
 //Create Function to Build Employee Car
 function displayEmployees(employees){
 	var employeesHTML = ""
@@ -22,6 +20,7 @@ function displayEmployees(employees){
 	    employeesHTML += '<div class="name">'+ employee.name.first + ' ' + employee.name.last + '</div>';
 	    employeesHTML += '<div class="email grey-font">'+ employee.email + '</div>';
 	    employeesHTML += '<div class="city grey-font">' + employee.location.city + '</div></div></div>';
+	    
 	       });
 
     $('.employees').html(employeesHTML);
@@ -29,24 +28,20 @@ function displayEmployees(employees){
 };
 
 //Create Function to Build Modal
-function displayModal(employees, id){
-	var employeesModal;
+function displayModal(employees){
+	var employeesModal="";
 	//create modal
-    employeesModal += '<div>' + employees[id].cell + '</div';
+    employeesModal += '<div>' + $(employees.phone).html() + '</div>';
 
     $('.modal-text').html(employeesModal);
-
 }
 
 //Click Event To Display Modal
 var modal = document.getElementById('myModal');
 $('.employees').on("click", ".employee", function() {
-	$.each(employees, function(i, employee) {
-		var id = $(this).attr('data-id');
+	  var current = $(this);
 	    modal.style.display = "block";
-	    displayModal(employees, id);
-	    console.log('click');
-	});
+	    displayModal(current);
 });
 
 // // When the user clicks on (x), close the modal
@@ -60,6 +55,3 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
-
-
-console.log(employees);
