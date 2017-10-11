@@ -24,7 +24,7 @@ function displayEmployees(employees){
 	    employeesHTML += '<div class="extra-info"><hr align="left" width="90%">';
 	    employeesHTML += '<div class="phone">' + employee.phone + '</div>';
 	    employeesHTML += '<div class="address">' + employee.location.street + ' ' + employee.location.city;
-	    employeesHTML += ',' + employee.location.state + ' ' + employee.location.postcode + '</div>';
+	    employeesHTML += ',' + employee.location.state + ', ' + employee.nat + ' ' + employee.location.postcode + '</div>';
 	    date = employee.dob.slice(0,10).split('-');
 	    employeesHTML += '<div class="birthday">Birthday: ' + date[1] +'/'+ date[2] + '/' + date[0] + '</div></div></div>';
 
